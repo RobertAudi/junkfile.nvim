@@ -1,8 +1,6 @@
 junkfile.nvim
 =============
 
-![Lua](https://img.shields.io/badge/Made%20with%20Lua-blueviolet.svg?style=for-the-badge&logo=lua)
-
 A plugin to create junk files.
 
 Installation
