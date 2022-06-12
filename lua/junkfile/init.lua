@@ -10,10 +10,10 @@ M.default_options = {
 }
 
 M.setup = function(opts)
-  M.options = utils.generate_configuration(opts, M.options, M.default_options)
+  M.options = utils.generate_options(opts, M.options, M.default_options)
 
   M.restore_defaults = function()
-    M.options = utils.generate_configuration({}, {}, M.default_options)
+    M.options = utils.generate_options({}, {}, M.default_options)
 
     return M
   end
