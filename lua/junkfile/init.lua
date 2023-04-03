@@ -68,7 +68,11 @@ M.setup = function(opts)
     local filename = utils.make_junk_tree(M.options.directory) .. "/" .. utils.get_filename(filename)
     edit_command = utils.to_string(edit_command or M.options.edit_command)
 
-    vim.pretty_print(filename)
+    if vim.fn.has("nvim-0.9") then
+      vim.print(filename)
+    else
+      vim.pretty_print(filename)
+    end
 
     vim.api.nvim_command("write! " .. vim.fn.fnameescape(filename))
     utils.open_junkfile(filename, edit_command)
